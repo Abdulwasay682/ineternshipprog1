@@ -1,0 +1,110 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator.c_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            Console.WriteLine("------Calculator Menu------------");
+           
+            do {
+                Console.WriteLine("1.Add");
+                Console.WriteLine("2.Subtract");
+                Console.WriteLine("3.Multiply");
+                Console.WriteLine("4.Divide");
+                Console.WriteLine("5.Power");
+                Console.WriteLine("6.Square root");
+                Console.WriteLine("7.Percentage");
+                Console.WriteLine("8.Factorial");
+                Console.WriteLine("9.Modulo");
+                Console.WriteLine("0.Exit");
+                Console.WriteLine("Enter your choice: ");
+                string input=Console.ReadLine();
+                choice = int.Parse(input);
+
+                double num1, num2;
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("Enter first number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter second  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:"+(num1+num2));
+                        break;
+                    case 2:
+                     
+                        Console.WriteLine("Enter first number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter second  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:" + (num1 - num2));
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter first number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter second  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:" + (num1 * num2));
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter first number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter second  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:" + (num1 / num2));
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter base number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter exponential  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:"+ Math.Pow(num1,num2));
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter a number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:"+ Math.Sqrt(num1));
+                        break;
+                    case 7:
+                        Console.WriteLine("Enter small number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter greater  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:"+ ((num1/num2)*100) );
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter number to find fact:");
+                        string res = Console.ReadLine();
+                        int num = int.Parse(res);
+                        int fact = 1;
+                        for(int i=1; i<=num; i++)
+                        {
+                            fact = fact * i;
+                        }
+                        Console.WriteLine("Factorial is: "+ fact);
+                        break;
+
+                    case 9:
+                        Console.WriteLine("Enter first number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter second  number: ");
+                        num2 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Result:"+ (num1 % num2));
+                        break;
+                    case 0:
+                        Console.WriteLine("GoodBye...........");
+                        break;
+                       
+                   
+                }  
+            }while(choice != 0) ;
+        }
+    }
+}
